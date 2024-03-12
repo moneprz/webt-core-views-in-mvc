@@ -1,55 +1,54 @@
-
 .flexContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Ensure all items are in a single row */
+    justify-content: center; /* Center items horizontally */
+    overflow-x: auto; /* Add horizontal scrollbar if necessary */
+    gap: 20px; /* Add space between items */
+    padding: 20px; /* Add padding to the container */
 }
-.flexItem{
+
+.flexItem {
     background-color: #918973;
     border: #33290F;
     color: #3C331C;
-
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
 }
+
+.image {
+    max-width: 100%;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #BBB39C;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    overflow-x: hidden;
 }
-
 
 h1 {
     color: #3C331C;
     margin-bottom: 20px;
 }
-.image {
-
-}
-.image {
-    max-width: 100%;
-    text-align: center; /* Center the image */
-}
-
-.image img {
-    width: 300px; /* Set your desired width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-
 
 /* Responsive styles */
 @media only screen and (max-width: 600px) {
-    body {
-        font-size: 14px;
+    .flexContainer {
+        flex-wrap: nowrap;
+        justify-content: center; /* Center items on smaller screens */
     }
 
-    .container {
-        padding:10px;
-
+    .flexItem {
+        width: calc(50% - 40px); /* Adjust the width for smaller screens */
+        margin: 10px; /* Adjust margin for smaller screens */
     }
 }
