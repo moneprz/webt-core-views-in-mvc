@@ -1,10 +1,10 @@
 .flexContainer {
     display: flex;
-    flex-wrap: nowrap; /* Ensure all items are in a single row */
-    justify-content: center; /* Center items horizontally */
-    overflow-x: auto; /* Add horizontal scrollbar if necessary */
-    gap: 20px; /* Add space between items */
-    padding: 20px; /* Add padding to the container */
+    flex-wrap: nowrap; 
+    justify-content: center;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
 }
 
 .flexItem {
